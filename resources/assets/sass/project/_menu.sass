@@ -1,0 +1,56 @@
+
+.menu
+	list-style: none
+	padding: 0
+	margin: 0
+	margin-top: 32px
+	float: right
+	+media-custom('max', 1010px)
+		display: none
+
+	&__mobile 
+		display: none
+		font-weight: bold
+		line-height: 20px
+		margin: 15px
+		margin-right: 0
+		+media-custom('max', 1010px)
+			display: block
+			float: right
+		&:hover 
+			text-decoration: none
+
+	li 
+		float: left
+		display: block
+		margin-right: 5px
+		border: solid 1px transparent
+		+media-custom('max', 1010px)
+			width: 100%
+			margin-bottom: 15px
+
+		&:last-of-type
+			margin-right: 0
+		a
+			display: block
+			padding: 6px 12px
+			text-decoration: none
+			font-weight: 600
+
+
+		&:hover,
+		&.active	
+			+radius
+			background: $primary-color
+			background: linear-gradient(to bottom, $primary-color, darken($primary-color, 5%))
+			border: solid 1px darken($primary-color, 5%)
+			a 
+				color: #fff		
+
+		&.get_quote
+			background: firebrick
+			border: solid 1px darken(firebrick, 5%)
+			background: linear-gradient(to bottom, firebrickr, darken(firebrick, 5%))	
+			+radius
+			a 
+				color: #fff

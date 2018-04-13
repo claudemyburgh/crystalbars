@@ -1,0 +1,55 @@
+
+
+@keyframes loader 
+	0%
+		transform: rotate(0deg)	
+	100%
+		transform: rotate(360deg)
+
+#loader	
+	position: fixed
+	z-index: 100000
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	height: 100%
+	width: 100%
+	background: #1b8dd7
+
+	&__spinner
+		position: relative
+		display: block
+		width: 100px
+		height: 100px
+
+		&::before
+			position: absolute
+			content: ''
+			top: -25px
+			left: -25px
+			right: -25px
+			bottom: -25px
+			border: solid 5px transparent
+			border-top: solid 5px #fff
+			border-bottom: solid 5px #fff
+			border-radius: 100%
+			animation: loader 0.75s infinite linear
+		
+		&::after
+			position: absolute
+			content: ''
+			top: -50px
+			left: -50px
+			right: -50px
+			bottom: -50px
+			border: solid 5px transparent
+			border-top: solid 5px #fff
+			border-bottom: solid 5px #fff
+			border-radius: 100%
+			animation: loader 1.5s infinite linear
+		

@@ -1,0 +1,59 @@
+
+body
+	padding-top: 0px
+	background: 
+		image: url('/img/pattern.svg')
+		repeat: repeat	
+		attachment: fixed
+
+.top-details	
+	background: $primary-color
+	color: $mute-color
+	margin-bottom: 15px
+	font-weight: 600
+	a 
+		color: $mute-color
+
+
+#app
+	min-height: calc(100vh - 100px)
+
+
+#logo 
+	max-width: 100%	
+
+.heading__group	
+	margin-top: 15px
+	margin-bottom: 15px
+	h1, h2, h3, h4, h5, h6
+		padding: 0
+		margin: 0	
+
+
+h1 
+	font-weight: 400
+
+
+.flex-container	
+	margin-bottom: 30px
+	+media-up(md)
+		display: flex
+		flex-direction: row
+		
+
+.flex-first
+	display: flex 
+	flex-direction: column
+	justify-content: center
+	background: $primary-color
+	text-align: center
+	width: 100%
+	padding: 30px
+	+media-up(md)
+		width: 300px
+
+
+.flex-last
+	flex: 1
+	padding: 15px
+

@@ -1,0 +1,83 @@
+
+.avatar
+	position: relative
+	padding-top: 50px
+
+
+.avatar--small
+	position: absolute
+	top: -55px
+	width: 100px
+	height: 100px
+	display: block
+	margin-right: 15px
+	float: left
+	+radius(100%)
+	border: solid 5px #fff	
+
+
+.stars
+	color: goldenrod		
+
+.testimonial--padding
+	padding-top: 60px	
+
+.avatar__main
+	padding-bottom: 60px	
+
+
+
+// slider 
+
+.testimonial
+	&__carousel
+		@extend .clearfix
+		// background: #fff
+		padding: 30px
+
+
+	&__section
+		position: relative
+		width: 100%
+		font-size: 22px
+		font-weight: bold
+		color: $primary-color
+
+		&::before 
+			position: absolute
+			content: ''
+			width: 100px
+			height: 100px
+			display: block
+			left: 0px
+			top: 0px
+			opacity: 0.25
+			background: 
+				image: url('/img/left-co.svg')
+				size: contain
+				repeat: no-repeat
+				position: center 	
+		&::after 
+			position: absolute
+			content: ''
+			width: 100px
+			height: 100px
+			display: block
+			right: 0px
+			bottom: 0px
+			opacity: 0.25
+			background: 
+				image: url('/img/rightco.svg')
+				size: contain
+				repeat: no-repeat
+				position: center 	
+
+
+	&__avatar
+		width: 120px
+		height: 120px
+		margin: 25px auto
+		display: block	
+		border: solid 3px #fff
+		box-shadow: rgba(#000, 0.25) 0 3px 5px
+		+radius(100%)
